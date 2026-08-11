@@ -57,15 +57,21 @@
     const rand = (a, b) => a + Math.random() * (b - a);
 
     const buildGlints = () => {
-      const count = Math.round((w * h) / 90000);
-      glints = Array.from({ length: Math.max(24, count) }, () => ({
-        x: rand(0, w),
-        y: rand(h * 0.56, h * 0.94),
-        r: rand(0.4, 1.6),
-        speed: rand(0.15, 0.5),
-        phase: rand(0, Math.PI * 2),
-        drift: rand(-0.06, 0.06),
-      }));
+      const count = Math.round((w * h) / 70000);
+      // glints cluster into a sun-reflection column at centre, widening toward the bottom
+      glints = Array.from({ length: Math.max(30, count) }, () => {
+        const y = rand(h * 0.565, h * 0.96);
+        const depth = (y - h * 0.565) / (h * 0.4);
+        const spread = w * (0.05 + depth * 0.16);
+        return {
+          x: w * 0.5 + rand(-spread, spread),
+          y,
+          r: rand(0.4, 1.7),
+          speed: rand(0.15, 0.5),
+          phase: rand(0, Math.PI * 2),
+          drift: rand(-0.05, 0.05),
+        };
+      });
     };
 
     const resize = () => {
@@ -82,40 +88,40 @@
     const draw = () => {
       ctx.clearRect(0, 0, w, h);
 
-      const sky = ctx.createLinearGradient(0, 0, 0, h * 0.6);
-      sky.addColorStop(0, "#040914");
-      sky.addColorStop(0.55, "#0a1730");
-      sky.addColorStop(1, "#0e2038");
+      // dusk sky — deep navy easing into warm amber at the horizon
+      const sky = ctx.createLinearGradient(0, 0, 0, h * 0.565);
+      sky.addColorStop(0, "#050a17");
+      sky.addColorStop(0.62, "#182644");
+      sky.addColorStop(0.86, "#4a3a4a");
+      sky.addColorStop(1, "#7a5240");
       ctx.fillStyle = sky;
-      ctx.fillRect(0, 0, w, h * 0.6);
+      ctx.fillRect(0, 0, w, h * 0.565);
 
-      const sea = ctx.createLinearGradient(0, h * 0.56, 0, h);
-      sea.addColorStop(0, "#0b1a33");
+      // low sun glow sitting on the horizon
+      const sx = w * 0.5, sy = h * 0.565;
+      const sunGlow = ctx.createRadialGradient(sx, sy, 0, sx, sy, w * 0.32);
+      sunGlow.addColorStop(0, "rgba(230,178,120,0.55)");
+      sunGlow.addColorStop(0.35, "rgba(198,161,92,0.22)");
+      sunGlow.addColorStop(1, "rgba(198,161,92,0)");
+      ctx.fillStyle = sunGlow;
+      ctx.fillRect(0, h * 0.2, w, h * 0.4);
+
+      const sea = ctx.createLinearGradient(0, h * 0.565, 0, h);
+      sea.addColorStop(0, "#2c2436");
+      sea.addColorStop(0.18, "#141f38");
       sea.addColorStop(1, "#050b18");
       ctx.fillStyle = sea;
-      ctx.fillRect(0, h * 0.56, w, h * 0.44);
-
-      // moon glow
-      const mx = w * 0.74, my = h * 0.24;
-      const glow = ctx.createRadialGradient(mx, my, 0, mx, my, w * 0.22);
-      glow.addColorStop(0, "rgba(228,210,166,0.16)");
-      glow.addColorStop(1, "rgba(228,210,166,0)");
-      ctx.fillStyle = glow;
-      ctx.fillRect(0, 0, w, h * 0.6);
-      ctx.beginPath();
-      ctx.fillStyle = "rgba(244,236,215,0.9)";
-      ctx.arc(mx, my, Math.max(w, h) * 0.014, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.fillRect(0, h * 0.565, w, h * 0.435);
 
       // horizon line
-      ctx.fillStyle = "rgba(198,161,92,0.18)";
+      ctx.fillStyle = "rgba(230,190,140,0.3)";
       ctx.fillRect(0, h * 0.565, w, 1);
 
-      // water glints
+      // sunlight reflecting on water
       glints.forEach((g) => {
         const s = (Math.sin(t * g.speed + g.phase) + 1) / 2;
         ctx.beginPath();
-        ctx.fillStyle = `rgba(228,210,166,${0.05 + s * 0.28})`;
+        ctx.fillStyle = `rgba(236,196,140,${0.06 + s * 0.32})`;
         ctx.arc(g.x, g.y, g.r + s * 0.8, 0, Math.PI * 2);
         ctx.fill();
         g.x += g.drift;
@@ -158,7 +164,7 @@
       "hero.title": "Set a course for the <em>extraordinary</em>.",
       "hero.sub": "From Portofino to Porto Cervo — handpicked yachts and private berths, arranged with quiet precision.",
       "hero.cta1": "Enquire About a Charter", "hero.cta2": "Reserve a Berth",
-      "hero.meta1.label": "Years Chartering", "hero.meta2.label": "Yachts Curated", "hero.meta3.label": "Marina Berths",
+      "hero.meta1.label": "Handpicked Fleet", "hero.meta2.label": "Berths Managed Daily", "hero.meta3.label": "Portofino to Monaco",
       "fleet.eyebrow": "The Fleet", "fleet.title": "A collection, not a catalogue.",
       "fleet.lede": "Every yacht is inspected, crewed and provisioned to a single standard — ours. Availability changes with the season; enquire for current departures.",
       "fleet.cta": "View Full Fleet",
@@ -176,7 +182,7 @@
       "about.quote": "We started MareFun because chartering a yacht and mooring a yacht were treated as two different industries. We don't believe that. A guest's week and an owner's year deserve the same discretion, the same standard.",
       "about.founderRole": "Founder & Managing Director",
       "about.body": "Two decades on the water taught us that luxury isn't more of everything — it's fewer, better decisions, made on your behalf before you have to ask. That principle still runs every charter and every berth we manage today.",
-      "about.stat1.label": "Guest Satisfaction", "about.stat2.label": "Marinas Partnered", "about.stat3.label": "Nationalities Served",
+      "about.stat1.label": "Personal Follow-Up", "about.stat2.label": "Careful Berth Management", "about.stat3.label": "Mediterranean-Wide Reach",
       "testimonials.eyebrow": "In Their Words", "testimonials.title": "Trusted across the Mediterranean.",
       "testimonials.lede": "A small sample of the notes our guests and berth holders leave us after each season.",
       "t1.quote": "Every detail was arranged before we thought to ask for it. The crew, the provisioning, even the berth transfer in Monaco — seamless.",
@@ -208,7 +214,7 @@
       "hero.title": "Rotta verso lo <em>straordinario</em>.",
       "hero.sub": "Da Portofino a Porto Cervo — yacht selezionati e ormeggi privati, organizzati con discreta precisione.",
       "hero.cta1": "Richiedi un Charter", "hero.cta2": "Prenota un Ormeggio",
-      "hero.meta1.label": "Anni di Attività", "hero.meta2.label": "Yacht Selezionati", "hero.meta3.label": "Posti Barca",
+      "hero.meta1.label": "Flotta Selezionata", "hero.meta2.label": "Ormeggi Gestiti Ogni Giorno", "hero.meta3.label": "Da Portofino a Monaco",
       "fleet.eyebrow": "La Flotta", "fleet.title": "Una collezione, non un catalogo.",
       "fleet.lede": "Ogni yacht è ispezionato, equipaggiato e rifornito secondo un unico standard — il nostro. La disponibilità varia con la stagione; contattateci per le partenze attuali.",
       "fleet.cta": "Vedi Tutta la Flotta",
@@ -226,7 +232,7 @@
       "about.quote": "Abbiamo fondato MareFun perché noleggiare uno yacht e ormeggiarlo venivano trattati come due settori distinti. Non lo crediamo. La settimana di un ospite e l'anno di un armatore meritano la stessa discrezione, lo stesso standard.",
       "about.founderRole": "Fondatore & Amministratore Delegato",
       "about.body": "Vent'anni in mare ci hanno insegnato che il lusso non è avere di più — sono meno decisioni, ma migliori, prese per voi prima ancora che dobbiate chiederle. Questo principio guida ancora oggi ogni charter e ogni ormeggio che gestiamo.",
-      "about.stat1.label": "Soddisfazione Ospiti", "about.stat2.label": "Marina Partner", "about.stat3.label": "Nazionalità Servite",
+      "about.stat1.label": "Assistenza Personale", "about.stat2.label": "Gestione Ormeggi Curata", "about.stat3.label": "Presenza in Tutto il Mediterraneo",
       "testimonials.eyebrow": "Le Loro Parole", "testimonials.title": "La fiducia di tutto il Mediterraneo.",
       "testimonials.lede": "Una piccola selezione dei commenti che i nostri ospiti e armatori ci lasciano ad ogni fine stagione.",
       "t1.quote": "Ogni dettaglio era già organizzato prima ancora che ci pensassimo. L'equipaggio, i rifornimenti, persino il trasferimento dell'ormeggio a Monaco — impeccabile.",
@@ -258,7 +264,7 @@
       "hero.title": "Cap sur l'<em>extraordinaire</em>.",
       "hero.sub": "De Portofino à Porto Cervo — yachts sélectionnés et places privées, organisés avec une discrétion précise.",
       "hero.cta1": "Demander un Charter", "hero.cta2": "Réserver une Place",
-      "hero.meta1.label": "Années d'Activité", "hero.meta2.label": "Yachts Sélectionnés", "hero.meta3.label": "Places de Port",
+      "hero.meta1.label": "Flotte Sélectionnée", "hero.meta2.label": "Places Gérées au Quotidien", "hero.meta3.label": "De Portofino à Monaco",
       "fleet.eyebrow": "La Flotte", "fleet.title": "Une collection, pas un catalogue.",
       "fleet.lede": "Chaque yacht est inspecté, armé et approvisionné selon un seul standard — le nôtre. La disponibilité varie selon la saison ; contactez-nous pour les départs actuels.",
       "fleet.cta": "Voir Toute la Flotte",
@@ -276,7 +282,7 @@
       "about.quote": "Nous avons créé MareFun parce que louer un yacht et l'amarrer étaient traités comme deux métiers distincts. Nous n'y croyons pas. La semaine d'un invité et l'année d'un armateur méritent la même discrétion, le même standard.",
       "about.founderRole": "Fondateur & Directeur Général",
       "about.body": "Vingt ans en mer nous ont appris que le luxe, ce n'est pas plus de tout — ce sont moins de décisions, mais meilleures, prises en votre nom avant même que vous ayez à les demander. Ce principe guide encore chaque charter et chaque place que nous gérons.",
-      "about.stat1.label": "Satisfaction Client", "about.stat2.label": "Marinas Partenaires", "about.stat3.label": "Nationalités Servies",
+      "about.stat1.label": "Suivi Personnalisé", "about.stat2.label": "Gestion Soignée des Places", "about.stat3.label": "Présence en Méditerranée",
       "testimonials.eyebrow": "Leurs Mots", "testimonials.title": "La confiance de toute la Méditerranée.",
       "testimonials.lede": "Un petit échantillon des retours laissés par nos invités et propriétaires de place après chaque saison.",
       "t1.quote": "Chaque détail était réglé avant même que nous y pensions. L'équipage, l'avitaillement, même le transfert de la place à Monaco — sans accroc.",

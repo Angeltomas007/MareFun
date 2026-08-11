@@ -235,8 +235,7 @@ h3 { font-size: var(--step-h3); line-height: 1.2; }
   border-top: 1px solid rgba(228, 210, 166, 0.18);
 }
 .hero-meta div { display: flex; flex-direction: column; gap: 0.3rem; }
-.hero-meta .num { font-family: var(--f-display); font-size: 1.9rem; color: var(--gold-soft); font-variant-numeric: tabular-nums; }
-.hero-meta .label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mist); }
+.hero-meta .phrase { font-family: var(--f-display); font-style: italic; font-size: 1.3rem; color: var(--gold-soft); }
 
 .scroll-cue {
   position: absolute;
@@ -343,17 +342,14 @@ h3 { font-size: var(--step-h3); line-height: 1.2; }
 .dot-hold { background: var(--gold); }
 .dot-full { background: var(--mist); opacity: 0.5; }
 
-.dock {
-  display: grid;
-  gap: 0.5rem;
-  margin-bottom: 2.4rem;
-}
-.pier { display: grid; grid-template-columns: 2.4rem repeat(10, 1fr); gap: 0.4rem; align-items: center; }
-.pier-label { font-size: 0.7rem; letter-spacing: 0.1em; color: var(--gold-soft); }
-.slip { aspect-ratio: 1; border-radius: 1px; }
-.slip.open { border: 1.5px solid var(--gold-soft); background: transparent; }
-.slip.hold { background: var(--gold); }
-.slip.full { background: rgba(147,162,180,0.35); }
+.dock-figure { margin-bottom: 2.4rem; }
+.dock-figure svg { width: 100%; height: auto; }
+.shore { fill: rgba(246,242,234,0.06); }
+.pier-line, .pier-cap { stroke: rgba(246,242,234,0.4); stroke-width: 2; }
+.pier-label-svg { font-family: var(--f-body); font-size: 15px; font-weight: 500; letter-spacing: 0.08em; fill: var(--gold-soft); }
+.slip-svg.open { fill: transparent; stroke: var(--gold-soft); stroke-width: 1.4; }
+.slip-svg.hold { fill: var(--gold); }
+.slip-svg.full { fill: rgba(147,162,180,0.4); }
 
 .rate-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 .rate-table th, .rate-table td { text-align: left; padding: 0.85rem 0.6rem; border-bottom: 1px solid rgba(246,242,234,0.14); }
@@ -399,8 +395,7 @@ h3 { font-size: var(--step-h3); line-height: 1.2; }
 .about-copy p { color: var(--slate); max-width: 42rem; }
 .about-stats { display: flex; gap: clamp(1.5rem, 4vw, 3rem); margin-top: 2.2rem; flex-wrap: wrap; }
 .about-stats div { display: flex; flex-direction: column; gap: 0.2rem; }
-.about-stats .num { font-family: var(--f-display); font-size: 2rem; color: var(--gold-dim); }
-.about-stats .label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); }
+.about-stats .phrase { font-family: var(--f-display); font-style: italic; font-size: 1.2rem; color: var(--gold-dim); }
 
 /* ==========================================================================
    Testimonials
@@ -551,7 +546,6 @@ h3 { font-size: var(--step-h3); line-height: 1.2; }
 
 @media (max-width: 700px) {
   .yacht-card, .yacht-card:nth-child(1), .yacht-card:nth-child(2), .yacht-card:nth-child(3), .yacht-card:nth-child(4) { grid-column: span 12; }
-  .pier { grid-template-columns: 2.2rem repeat(10, 1fr); gap: 0.25rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .hero-meta { gap: 1.4rem 2rem; }
 }

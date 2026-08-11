@@ -61,9 +61,9 @@
       <a href="#marina" class="btn btn-line" style="color:#f6f2ea" data-i18n="hero.cta2">Reserve a Berth</a>
     </div>
     <div class="hero-meta">
-      <div><span class="num">20</span><span class="label" data-i18n="hero.meta1.label">Years Chartering</span></div>
-      <div><span class="num">42</span><span class="label" data-i18n="hero.meta2.label">Yachts Curated</span></div>
-      <div><span class="num">180</span><span class="label" data-i18n="hero.meta3.label">Marina Berths</span></div>
+      <div><span class="phrase" data-i18n="hero.meta1.label">Handpicked Fleet</span></div>
+      <div><span class="phrase" data-i18n="hero.meta2.label">Berths Managed Daily</span></div>
+      <div><span class="phrase" data-i18n="hero.meta3.label">Portofino to Monaco</span></div>
     </div>
   </div>
 
@@ -200,19 +200,53 @@
           <span><i class="dot dot-full"></i><span data-i18n="marina.legend.full">Occupied</span></span>
         </div>
 
-        <div class="dock" aria-hidden="true">
-          <div class="pier">
-            <span class="pier-label">A</span>
-            <span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip open"></span>
-          </div>
-          <div class="pier">
-            <span class="pier-label">B</span>
-            <span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span>
-          </div>
-          <div class="pier">
-            <span class="pier-label">C</span>
-            <span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip full"></span><span class="slip open"></span><span class="slip full"></span><span class="slip hold"></span><span class="slip open"></span>
-          </div>
+        <figure class="dock-figure" aria-hidden="true">
+          <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg">
+            <rect class="shore" x="0" y="0" width="28" height="280"/>
+            <!-- Pier A -->
+            <text class="pier-label-svg" x="6" y="30">A</text>
+            <line class="pier-line" x1="28" y1="54" x2="500" y2="54"/>
+            <line class="pier-cap" x1="500" y1="44" x2="500" y2="64"/>
+            <rect class="slip-svg open" x="73" y="28" width="14" height="22"/>
+            <rect class="slip-svg open" x="153" y="28" width="14" height="22"/>
+            <rect class="slip-svg hold" x="233" y="28" width="14" height="22"/>
+            <rect class="slip-svg full" x="313" y="28" width="14" height="22"/>
+            <rect class="slip-svg open" x="393" y="28" width="14" height="22"/>
+            <rect class="slip-svg full" x="73" y="58" width="14" height="22"/>
+            <rect class="slip-svg open" x="153" y="58" width="14" height="22"/>
+            <rect class="slip-svg open" x="233" y="58" width="14" height="22"/>
+            <rect class="slip-svg hold" x="313" y="58" width="14" height="22"/>
+            <rect class="slip-svg open" x="393" y="58" width="14" height="22"/>
+            <!-- Pier B -->
+            <text class="pier-label-svg" x="6" y="144">B</text>
+            <line class="pier-line" x1="28" y1="140" x2="500" y2="140"/>
+            <line class="pier-cap" x1="500" y1="130" x2="500" y2="150"/>
+            <rect class="slip-svg open" x="73" y="114" width="14" height="22"/>
+            <rect class="slip-svg hold" x="153" y="114" width="14" height="22"/>
+            <rect class="slip-svg open" x="233" y="114" width="14" height="22"/>
+            <rect class="slip-svg open" x="313" y="114" width="14" height="22"/>
+            <rect class="slip-svg full" x="393" y="114" width="14" height="22"/>
+            <rect class="slip-svg open" x="73" y="144" width="14" height="22"/>
+            <rect class="slip-svg full" x="153" y="144" width="14" height="22"/>
+            <rect class="slip-svg open" x="233" y="144" width="14" height="22"/>
+            <rect class="slip-svg hold" x="313" y="144" width="14" height="22"/>
+            <rect class="slip-svg open" x="393" y="144" width="14" height="22"/>
+            <!-- Pier C -->
+            <text class="pier-label-svg" x="6" y="230">C</text>
+            <line class="pier-line" x1="28" y1="226" x2="500" y2="226"/>
+            <line class="pier-cap" x1="500" y1="216" x2="500" y2="236"/>
+            <rect class="slip-svg full" x="73" y="200" width="14" height="22"/>
+            <rect class="slip-svg open" x="153" y="200" width="14" height="22"/>
+            <rect class="slip-svg open" x="233" y="200" width="14" height="22"/>
+            <rect class="slip-svg open" x="313" y="200" width="14" height="22"/>
+            <rect class="slip-svg hold" x="393" y="200" width="14" height="22"/>
+            <rect class="slip-svg open" x="73" y="230" width="14" height="22"/>
+            <rect class="slip-svg open" x="153" y="230" width="14" height="22"/>
+            <rect class="slip-svg hold" x="233" y="230" width="14" height="22"/>
+            <rect class="slip-svg full" x="313" y="230" width="14" height="22"/>
+            <rect class="slip-svg open" x="393" y="230" width="14" height="22"/>
+          </svg>
+        </figure>
         </div>
 
         <table class="rate-table">
@@ -271,9 +305,9 @@
       <blockquote data-i18n="about.quote">We started MareFun because chartering a yacht and mooring a yacht were treated as two different industries. We don't believe that. A guest's week and an owner's year deserve the same discretion, the same standard.</blockquote>
       <p data-i18n="about.body">Two decades on the water taught us that luxury isn't more of everything — it's fewer, better decisions, made on your behalf before you have to ask. That principle still runs every charter and every berth we manage today.</p>
       <div class="about-stats">
-        <div><span class="num">98%</span><span class="label" data-i18n="about.stat1.label">Guest Satisfaction</span></div>
-        <div><span class="num">14</span><span class="label" data-i18n="about.stat2.label">Marinas Partnered</span></div>
-        <div><span class="num">30+</span><span class="label" data-i18n="about.stat3.label">Nationalities Served</span></div>
+        <div><span class="phrase" data-i18n="about.stat1.label">Personal Follow-Up</span></div>
+        <div><span class="phrase" data-i18n="about.stat2.label">Careful Berth Management</span></div>
+        <div><span class="phrase" data-i18n="about.stat3.label">Mediterranean-Wide Reach</span></div>
       </div>
     </div>
   </div>
