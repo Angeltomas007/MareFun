@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MareFun — Luxury Yacht Charter &amp; Marina Berth Management</title>
+<meta name="description" content="MareFun arranges private yacht charters and manages marina berths across the Mediterranean, from Porto Cervo to Monaco." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050b18'/%3E%3Cpath d='M6 22c4 3 16 3 20 0M16 22V6M16 8l9 2-9 12z' fill='none' stroke='%23c6a15c' stroke-width='1.6'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header">
+  <div class="container">
+    <a href="#top" class="brand">
+      <span class="brand-mark">MareFun</span>
+      <span class="brand-tag">Charter &amp; Marina</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#fleet" data-i18n="nav.fleet">Fleet</a>
+      <a href="#marina" data-i18n="nav.marina">Marina</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <div class="lang-switch" aria-label="Language">
+        <button type="button" data-lang="en">EN</button><span>/</span>
+        <button type="button" data-lang="it">IT</button><span>/</span>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
+    </nav>
+
+    <div style="display:flex; align-items:center; gap:1.4rem;">
+      <a href="#contact" class="btn btn-line header-cta" style="color:#f6f2ea"><span data-i18n="header.cta">Enquire</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" id="top">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-vessel" aria-hidden="true">
+    <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 20 L100 78 L62 78 Z" stroke="currentColor" stroke-width="1.2" fill="rgba(228,210,166,0.06)"/>
+      <path d="M100 30 L100 76 L128 72 Z" stroke="currentColor" stroke-width="1.2" fill="rgba(228,210,166,0.06)"/>
+      <line x1="100" y1="16" x2="100" y2="80" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M14 82C46 96 154 96 186 82L170 82C146 90 54 90 30 82Z" fill="currentColor" opacity="0.55"/>
+    </svg>
+  </div>
+
+  <div class="hero-content container">
+    <p class="eyebrow" data-i18n="hero.eyebrow">Mediterranean Yacht Charter &amp; Marina Management</p>
+    <h1 data-i18n-html="hero.title">Set a course for the <em>extraordinary</em>.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">From Portofino to Porto Cervo — handpicked yachts and private berths, arranged with quiet precision.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-gold" data-i18n="hero.cta1">Enquire About a Charter</a>
+      <a href="#marina" class="btn btn-line" style="color:#f6f2ea" data-i18n="hero.cta2">Reserve a Berth</a>
+    </div>
+    <div class="hero-meta">
+      <div><span class="num">20</span><span class="label" data-i18n="hero.meta1.label">Years Chartering</span></div>
+      <div><span class="num">42</span><span class="label" data-i18n="hero.meta2.label">Yachts Curated</span></div>
+      <div><span class="num">180</span><span class="label" data-i18n="hero.meta3.label">Marina Berths</span></div>
+    </div>
+  </div>
+
+  <span class="scroll-cue">Scroll</span>
+</section>
+
+<!-- ============================== FLEET ============================== -->
+<section class="fleet" id="fleet">
+  <div class="container">
+    <div class="fleet-head" data-reveal>
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow" data-i18n="fleet.eyebrow">The Fleet</p>
+        <h2 data-i18n="fleet.title">A collection, not a catalogue.</h2>
+      </div>
+      <p class="lede" data-i18n="fleet.lede">Every yacht is inspected, crewed and provisioned to a single standard — ours. Availability changes with the season; enquire for current departures.</p>
+    </div>
+
+    <div class="fleet-grid" data-reveal="stagger">
+      <!-- Yacht 1 -->
+      <article class="yacht-card">
+        <div class="yacht-visual v-dusk">
+          <span class="loa">55m LOA</span>
+          <div class="hz"></div>
+          <svg class="mark" viewBox="0 0 200 100" fill="none"><path d="M100 20 L100 78 L62 78 Z" stroke="currentColor" stroke-width="1"/><path d="M100 30 L100 76 L128 72 Z" stroke="currentColor" stroke-width="1"/><line x1="100" y1="16" x2="100" y2="80" stroke="currentColor" stroke-width="1"/><path d="M14 82C46 96 154 96 186 82L170 82C146 90 54 90 30 82Z" fill="currentColor" opacity="0.7"/></svg>
+        </div>
+        <div class="yacht-info">
+          <div class="row1"><h3>Meridiana</h3><span class="yacht-type" data-i18n="yacht.motor">Motor Yacht</span></div>
+          <div class="yacht-specs">
+            <span><b>55m</b> LOA</span>
+            <span><b>12</b> <span data-i18n="fleet.guests">Guests</span></span>
+            <span><b>6</b> <span data-i18n="fleet.cabins">Cabins</span></span>
+            <span><b>14</b> <span data-i18n="fleet.crew">Crew</span></span>
+          </div>
+          <div class="yacht-footline">
+            <span class="yacht-price" data-i18n="fleet.price">Price on request</span>
+            <a href="#contact" class="yacht-link"><span data-i18n="fleet.enquire">Enquire</span>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Yacht 2 -->
+      <article class="yacht-card">
+        <div class="yacht-visual v-noon">
+          <span class="loa">38m LOA</span>
+          <div class="hz"></div>
+          <svg class="mark" viewBox="0 0 200 100" fill="none"><path d="M100 20 L100 78 L62 78 Z" stroke="currentColor" stroke-width="1"/><path d="M100 30 L100 76 L128 72 Z" stroke="currentColor" stroke-width="1"/><line x1="100" y1="16" x2="100" y2="80" stroke="currentColor" stroke-width="1"/><path d="M14 82C46 96 154 96 186 82L170 82C146 90 54 90 30 82Z" fill="currentColor" opacity="0.7"/></svg>
+        </div>
+        <div class="yacht-info">
+          <div class="row1"><h3>Nautilus Aurea</h3><span class="yacht-type" data-i18n="yacht.motor">Motor Yacht</span></div>
+          <div class="yacht-specs">
+            <span><b>38m</b> LOA</span>
+            <span><b>10</b> <span data-i18n="fleet.guests">Guests</span></span>
+            <span><b>5</b> <span data-i18n="fleet.cabins">Cabins</span></span>
+            <span><b>9</b> <span data-i18n="fleet.crew">Crew</span></span>
+          </div>
+          <div class="yacht-footline">
+            <span class="yacht-price" data-i18n="fleet.price">Price on request</span>
+            <a href="#contact" class="yacht-link"><span data-i18n="fleet.enquire">Enquire</span>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Yacht 3 -->
+      <article class="yacht-card">
+        <div class="yacht-visual v-dawn">
+          <span class="loa">30m LOA</span>
+          <div class="hz"></div>
+          <svg class="mark" viewBox="0 0 200 100" fill="none"><path d="M100 20 L100 78 L62 78 Z" stroke="currentColor" stroke-width="1"/><path d="M100 30 L100 76 L128 72 Z" stroke="currentColor" stroke-width="1"/><line x1="100" y1="16" x2="100" y2="80" stroke="currentColor" stroke-width="1"/><path d="M14 82C46 96 154 96 186 82L170 82C146 90 54 90 30 82Z" fill="currentColor" opacity="0.7"/></svg>
+        </div>
+        <div class="yacht-info">
+          <div class="row1"><h3>Vento d'Oro</h3><span class="yacht-type" data-i18n="yacht.sail">Sailing Yacht</span></div>
+          <div class="yacht-specs">
+            <span><b>30m</b> LOA</span>
+            <span><b>8</b> <span data-i18n="fleet.guests">Guests</span></span>
+            <span><b>4</b> <span data-i18n="fleet.cabins">Cabins</span></span>
+            <span><b>6</b> <span data-i18n="fleet.crew">Crew</span></span>
+          </div>
+          <div class="yacht-footline">
+            <span class="yacht-price" data-i18n="fleet.price">Price on request</span>
+            <a href="#contact" class="yacht-link"><span data-i18n="fleet.enquire">Enquire</span>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Yacht 4 -->
+      <article class="yacht-card">
+        <div class="yacht-visual v-moon">
+          <span class="loa">48m LOA</span>
+          <div class="hz"></div>
+          <svg class="mark" viewBox="0 0 200 100" fill="none"><path d="M100 20 L100 78 L62 78 Z" stroke="currentColor" stroke-width="1"/><path d="M100 30 L100 76 L128 72 Z" stroke="currentColor" stroke-width="1"/><line x1="100" y1="16" x2="100" y2="80" stroke="currentColor" stroke-width="1"/><path d="M14 82C46 96 154 96 186 82L170 82C146 90 54 90 30 82Z" fill="currentColor" opacity="0.7"/></svg>
+        </div>
+        <div class="yacht-info">
+          <div class="row1"><h3>Serenissima</h3><span class="yacht-type" data-i18n="yacht.motor">Motor Yacht</span></div>
+          <div class="yacht-specs">
+            <span><b>48m</b> LOA</span>
+            <span><b>12</b> <span data-i18n="fleet.guests">Guests</span></span>
+            <span><b>6</b> <span data-i18n="fleet.cabins">Cabins</span></span>
+            <span><b>11</b> <span data-i18n="fleet.crew">Crew</span></span>
+          </div>
+          <div class="yacht-footline">
+            <span class="yacht-price" data-i18n="fleet.price">Price on request</span>
+            <a href="#contact" class="yacht-link"><span data-i18n="fleet.enquire">Enquire</span>
+              <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h11M10 5l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="fleet-foot" data-reveal>
+      <a href="#contact" class="btn btn-line" style="color:#0e1e3a" data-i18n="fleet.cta">View Full Fleet</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== MARINA ============================== -->
+<section class="marina on-dark" id="marina">
+  <div class="container">
+    <div class="marina-grid">
+      <div class="marina-copy" data-reveal>
+        <p class="eyebrow" data-i18n="marina.eyebrow">Marina &amp; Berth Management</p>
+        <h2 data-i18n="marina.title">Your berth, held to the same standard as your yacht.</h2>
+        <p class="lede" data-i18n="marina.lede">Real-time availability across our managed piers, with transparent day-rates by length overall. Long-term contracts and owner priority booking available on request.</p>
+
+        <div class="berth-legend">
+          <span><i class="dot dot-open"></i><span data-i18n="marina.legend.open">Available</span></span>
+          <span><i class="dot dot-hold"></i><span data-i18n="marina.legend.hold">On Hold</span></span>
+          <span><i class="dot dot-full"></i><span data-i18n="marina.legend.full">Occupied</span></span>
+        </div>
+
+        <div class="dock" aria-hidden="true">
+          <div class="pier">
+            <span class="pier-label">A</span>
+            <span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip open"></span>
+          </div>
+          <div class="pier">
+            <span class="pier-label">B</span>
+            <span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip hold"></span>
+          </div>
+          <div class="pier">
+            <span class="pier-label">C</span>
+            <span class="slip open"></span><span class="slip hold"></span><span class="slip full"></span><span class="slip open"></span><span class="slip open"></span><span class="slip full"></span><span class="slip open"></span><span class="slip full"></span><span class="slip hold"></span><span class="slip open"></span>
+          </div>
+        </div>
+
+        <table class="rate-table">
+          <thead>
+            <tr><th data-i18n="marina.th.length">Length Overall</th><th data-i18n="marina.th.day">Per Day</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Up to 12m</td><td><span class="price">€90</span> <span data-i18n="marina.perDay">/ day</span></td></tr>
+            <tr><td>12 – 18m</td><td><span class="price">€160</span> <span data-i18n="marina.perDay">/ day</span></td></tr>
+            <tr><td>18 – 24m</td><td><span class="price">€280</span> <span data-i18n="marina.perDay">/ day</span></td></tr>
+            <tr><td>24m +</td><td><span class="price" data-i18n="marina.onRequest">On Request</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="marina-panel" data-reveal>
+        <p class="eyebrow" data-i18n="marina.eyebrow">Marina &amp; Berth Management</p>
+        <h3 data-i18n="marina.panel.title">Request a Berth</h3>
+        <p class="lede" data-i18n="marina.panel.lede">Tell us your yacht's length, arrival window and stay duration — our harbour team confirms within one business day.</p>
+
+        <div class="field">
+          <label for="m-length" data-i18n="marina.th.length">Length Overall</label>
+          <input id="m-length" type="text" placeholder="e.g. 22m" />
+        </div>
+        <div class="field">
+          <label for="m-arrival">Arrival</label>
+          <input id="m-arrival" type="date" />
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label for="m-departure">Departure</label>
+          <input id="m-departure" type="date" />
+        </div>
+        <a href="#contact" class="btn btn-gold" data-i18n="marina.panel.cta">Check Availability</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ABOUT ============================== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="founder-card" data-reveal>
+      <div class="monogram">A.C.</div>
+      <div>
+        <p class="founder-name">Alessandro Conti</p>
+        <p class="founder-role" data-i18n="about.founderRole">Founder &amp; Managing Director</p>
+      </div>
+      <div class="founder-sig" aria-hidden="true">
+        <svg viewBox="0 0 140 40" fill="none"><path d="M2 30 C 10 10, 18 10, 22 24 C 26 36, 32 20, 38 14 C 44 8, 48 26, 56 22 C 64 18, 66 10, 74 10 C 84 10, 84 30, 96 28 C 108 26, 106 12, 118 14 C 126 15, 130 22, 136 18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <div class="about-copy" data-reveal>
+      <p class="eyebrow" data-i18n="about.eyebrow">Our Story</p>
+      <h2 style="margin-top:0.6rem; margin-bottom:1.6rem" data-i18n="about.title">Built by people who would rather be at sea.</h2>
+      <blockquote data-i18n="about.quote">We started MareFun because chartering a yacht and mooring a yacht were treated as two different industries. We don't believe that. A guest's week and an owner's year deserve the same discretion, the same standard.</blockquote>
+      <p data-i18n="about.body">Two decades on the water taught us that luxury isn't more of everything — it's fewer, better decisions, made on your behalf before you have to ask. That principle still runs every charter and every berth we manage today.</p>
+      <div class="about-stats">
+        <div><span class="num">98%</span><span class="label" data-i18n="about.stat1.label">Guest Satisfaction</span></div>
+        <div><span class="num">14</span><span class="label" data-i18n="about.stat2.label">Marinas Partnered</span></div>
+        <div><span class="num">30+</span><span class="label" data-i18n="about.stat3.label">Nationalities Served</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TESTIMONIALS ============================== -->
+<section class="testimonials on-dark" id="testimonials">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow" data-i18n="testimonials.eyebrow">In Their Words</p>
+      <h2 data-i18n="testimonials.title">Trusted across the Mediterranean.</h2>
+      <p class="lede" data-i18n="testimonials.lede">A small sample of the notes our guests and berth holders leave us after each season.</p>
+    </div>
+
+    <div class="t-track" data-reveal="stagger">
+      <article class="t-card">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+        </div>
+        <p class="t-quote" data-i18n="t1.quote">Every detail was arranged before we thought to ask for it. The crew, the provisioning, even the berth transfer in Monaco — seamless.</p>
+        <div class="t-person">
+          <span class="t-init">JW</span>
+          <div><p class="t-name">J. Whitfield</p><p class="t-loc">London</p></div>
+        </div>
+      </article>
+
+      <article class="t-card">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+        </div>
+        <p class="t-quote" data-i18n="t2.quote">We've kept our yacht at their marina for three seasons now. Communication on availability and pricing is the clearest we've had anywhere.</p>
+        <div class="t-person">
+          <span class="t-init">MR</span>
+          <div><p class="t-name">M. Rossi</p><p class="t-loc">Milano</p></div>
+        </div>
+      </article>
+
+      <article class="t-card">
+        <div class="stars" aria-label="4.5 out of 5 stars">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+          <svg class="half" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.8 6.2.6-4.7 4.2 1.4 6.2L10 14.9 4.5 17.8l1.4-6.2L1.2 7.4l6.2-.6z"/></svg>
+        </div>
+        <p class="t-quote" data-i18n="t3.quote">Sober, professional, and genuinely knowledgeable about the boats themselves. A rare combination in this industry.</p>
+        <div class="t-person">
+          <span class="t-init">CD</span>
+          <div><p class="t-name">C. Dubois</p><p class="t-loc">Paris</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ============================== -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div data-reveal>
+      <p class="eyebrow" data-i18n="contact.eyebrow">Get in Touch</p>
+      <h2 style="margin-top:0.6rem" data-i18n="contact.title">Begin with a conversation.</h2>
+      <p class="lede" style="margin-top:1rem" data-i18n="contact.lede">Whether you're chartering for a week or berthing for a season, our team replies personally — no call centres, no forms lost to the void.</p>
+
+      <div class="info-list">
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v3a2 2 0 0 1-2 2C10.5 20 4 13.5 4 6a2 2 0 0 1 2-2z"/></svg>
+          <div><p class="k" data-i18n="contact.phone.k">Phone</p><p class="v">+377 93 15 00 00</p></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>
+          <div><p class="k" data-i18n="contact.email.k">Email</p><p class="v">charter@marefun.com</p></div>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.2"/></svg>
+          <div><p class="k" data-i18n="contact.location.k">Base Marina</p><p class="v" data-i18n="contact.location.v">Porto Cervo, Sardinia · Additional berths in Monaco</p></div>
+        </div>
+      </div>
+
+      <figure class="chart" aria-hidden="true">
+        <svg viewBox="0 0 400 250" fill="none">
+          <rect x="0" y="0" width="400" height="250" fill="#f6f2ea"/>
+          <g stroke="#d8cdb4" stroke-width="1">
+            <line x1="0" y1="41" x2="400" y2="41"/><line x1="0" y1="83" x2="400" y2="83"/>
+            <line x1="0" y1="125" x2="400" y2="125"/><line x1="0" y1="167" x2="400" y2="167"/><line x1="0" y1="209" x2="400" y2="209"/>
+            <line x1="66" y1="0" x2="66" y2="250"/><line x1="133" y1="0" x2="133" y2="250"/>
+            <line x1="200" y1="0" x2="200" y2="250"/><line x1="266" y1="0" x2="266" y2="250"/><line x1="333" y1="0" x2="333" y2="250"/>
+          </g>
+          <path d="M0 60 C 60 40, 90 90, 150 70 C 210 50, 240 110, 300 95 C 340 85, 370 100, 400 90 L400 0 L0 0 Z" fill="#0e1e3a" opacity="0.06"/>
+          <path d="M0 60 C 60 40, 90 90, 150 70 C 210 50, 240 110, 300 95 C 340 85, 370 100, 400 90" stroke="#0e1e3a" stroke-width="1.4"/>
+          <circle cx="222" cy="128" r="4" fill="#c6a15c"/>
+          <circle cx="222" cy="128" r="9" fill="none" stroke="#c6a15c" stroke-width="1"/>
+          <text x="234" y="123" font-family="Jost, sans-serif" font-size="10" fill="#0e1e3a" letter-spacing="0.5">PORTO CERVO</text>
+          <text x="234" y="137" font-family="Jost, sans-serif" font-size="9" fill="#56606e" letter-spacing="0.5">41°07&#8242; N · 9°32&#8242; E</text>
+        </svg>
+      </figure>
+    </div>
+
+    <div class="form-panel" data-reveal>
+      <h3 data-i18n="form.title">Send an Enquiry</h3>
+      <p data-i18n="form.lede">Fields marked with an asterisk are required.</p>
+
+      <form id="enquiry-form" novalidate>
+        <div class="field">
+          <label for="f-name" data-i18n="form.name">Full Name *</label>
+          <input id="f-name" type="text" data-i18n-ph="form.name.ph" placeholder="Alexandra Bennett" />
+          <p class="field-error"></p>
+        </div>
+
+        <div class="field">
+          <label data-i18n="form.method">Preferred Contact *</label>
+          <div class="method-toggle">
+            <label><input type="radio" name="method" value="email" checked /> <span data-i18n="form.method.email">Email</span></label>
+            <label><input type="radio" name="method" value="phone" /> <span data-i18n="form.method.phone">Phone</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="f-contact" data-i18n="form.contact">Your Contact Detail *</label>
+          <input id="f-contact" type="email" data-i18n-ph="form.contact.ph.email" placeholder="you@example.com" />
+          <p class="field-error"></p>
+        </div>
+
+        <div class="field">
+          <label for="f-message" data-i18n="form.message">Message *</label>
+          <textarea id="f-message" rows="4" data-i18n-ph="form.message.ph" placeholder="Tell us about the charter or berth you have in mind…"></textarea>
+          <p class="field-error"></p>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center" data-i18n="form.submit">Send Enquiry</button>
+
+        <p class="form-note" id="form-note">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor"/><path d="M6 10l3 3 5-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span></span>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <span class="coords">41°07&#8242;N · 9°32&#8242;E — PORTO CERVO</span>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><span class="brand-mark">MareFun</span></a>
+        <p data-i18n="footer.blurb">Luxury yacht charter and marina berth management across the Mediterranean, arranged with quiet precision since 2005.</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="10" x2="8" y2="17"/><circle cx="8" cy="6.7" r="0.6" fill="currentColor"/><path d="M12 17v-4.5a2.2 2.2 0 0 1 4.4 0V17"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M14 8.5h-1.6c-.9 0-1.4.6-1.4 1.5V12h3l-.4 3h-2.6v6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.services">Services</h4>
+        <ul>
+          <li><a href="#fleet" data-i18n="footer.svc1">Yacht Charter</a></li>
+          <li><a href="#marina" data-i18n="footer.svc2">Berth Management</a></li>
+          <li><a href="#contact" data-i18n="footer.svc3">Concierge &amp; Provisioning</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.company">Company</h4>
+        <ul>
+          <li><a href="#fleet" data-i18n="footer.link.fleet">Fleet</a></li>
+          <li><a href="#marina" data-i18n="footer.link.marina">Marina</a></li>
+          <li><a href="#about" data-i18n="footer.link.about">About</a></li>
+          <li><a href="#contact" data-i18n="footer.link.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a></li>
+          <li><a href="#" data-i18n="footer.cookies">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> MareFun. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <div class="lang-switch">
+        <button type="button" data-lang="en">EN</button><span>/</span>
+        <button type="button" data-lang="it">IT</button><span>/</span>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
