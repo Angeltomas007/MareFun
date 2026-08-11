@@ -200,66 +200,70 @@
           <span><i class="dot dot-full"></i><span data-i18n="marina.legend.full">Occupied</span></span>
         </div>
 
-        <figure class="dock-figure" aria-hidden="true">
-          <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg">
-            <rect class="shore" x="0" y="0" width="28" height="280"/>
-            <!-- Pier A -->
-            <text class="pier-label-svg" x="6" y="30">A</text>
-            <line class="pier-line" x1="28" y1="54" x2="500" y2="54"/>
-            <line class="pier-cap" x1="500" y1="44" x2="500" y2="64"/>
-            <rect class="slip-svg open" x="73" y="28" width="14" height="22"/>
-            <rect class="slip-svg open" x="153" y="28" width="14" height="22"/>
-            <rect class="slip-svg hold" x="233" y="28" width="14" height="22"/>
-            <rect class="slip-svg full" x="313" y="28" width="14" height="22"/>
-            <rect class="slip-svg open" x="393" y="28" width="14" height="22"/>
-            <rect class="slip-svg full" x="73" y="58" width="14" height="22"/>
-            <rect class="slip-svg open" x="153" y="58" width="14" height="22"/>
-            <rect class="slip-svg open" x="233" y="58" width="14" height="22"/>
-            <rect class="slip-svg hold" x="313" y="58" width="14" height="22"/>
-            <rect class="slip-svg open" x="393" y="58" width="14" height="22"/>
-            <!-- Pier B -->
-            <text class="pier-label-svg" x="6" y="144">B</text>
-            <line class="pier-line" x1="28" y1="140" x2="500" y2="140"/>
-            <line class="pier-cap" x1="500" y1="130" x2="500" y2="150"/>
-            <rect class="slip-svg open" x="73" y="114" width="14" height="22"/>
-            <rect class="slip-svg hold" x="153" y="114" width="14" height="22"/>
-            <rect class="slip-svg open" x="233" y="114" width="14" height="22"/>
-            <rect class="slip-svg open" x="313" y="114" width="14" height="22"/>
-            <rect class="slip-svg full" x="393" y="114" width="14" height="22"/>
-            <rect class="slip-svg open" x="73" y="144" width="14" height="22"/>
-            <rect class="slip-svg full" x="153" y="144" width="14" height="22"/>
-            <rect class="slip-svg open" x="233" y="144" width="14" height="22"/>
-            <rect class="slip-svg hold" x="313" y="144" width="14" height="22"/>
-            <rect class="slip-svg open" x="393" y="144" width="14" height="22"/>
-            <!-- Pier C -->
-            <text class="pier-label-svg" x="6" y="230">C</text>
-            <line class="pier-line" x1="28" y1="226" x2="500" y2="226"/>
-            <line class="pier-cap" x1="500" y1="216" x2="500" y2="236"/>
-            <rect class="slip-svg full" x="73" y="200" width="14" height="22"/>
-            <rect class="slip-svg open" x="153" y="200" width="14" height="22"/>
-            <rect class="slip-svg open" x="233" y="200" width="14" height="22"/>
-            <rect class="slip-svg open" x="313" y="200" width="14" height="22"/>
-            <rect class="slip-svg hold" x="393" y="200" width="14" height="22"/>
-            <rect class="slip-svg open" x="73" y="230" width="14" height="22"/>
-            <rect class="slip-svg open" x="153" y="230" width="14" height="22"/>
-            <rect class="slip-svg hold" x="233" y="230" width="14" height="22"/>
-            <rect class="slip-svg full" x="313" y="230" width="14" height="22"/>
-            <rect class="slip-svg open" x="393" y="230" width="14" height="22"/>
-          </svg>
-        </figure>
-        </div>
+        <div class="pontoons" aria-hidden="true">
+          <div class="pontoon">
+            <div class="pontoon-head">
+              <span class="pontoon-size" data-i18n="marina.size.small">Small · Up to 12m</span>
+              <span class="pontoon-rate"><span class="price">€90</span> <span data-i18n="marina.perDay">/ day</span></span>
+            </div>
+            <svg class="pontoon-line" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg">
+              <line class="pier-line" x1="16" y1="30" x2="580" y2="30"/>
+              <line class="pier-cap" x1="580" y1="20" x2="580" y2="40"/>
+              <rect class="slip-svg open" x="56" y="6" width="12" height="18"/>
+              <rect class="slip-svg open" x="126" y="6" width="12" height="18"/>
+              <rect class="slip-svg hold" x="196" y="6" width="12" height="18"/>
+              <rect class="slip-svg open" x="266" y="6" width="12" height="18"/>
+              <rect class="slip-svg full" x="336" y="6" width="12" height="18"/>
+              <rect class="slip-svg open" x="406" y="6" width="12" height="18"/>
+              <rect class="slip-svg open" x="476" y="6" width="12" height="18"/>
+              <rect class="slip-svg full" x="56" y="36" width="12" height="18"/>
+              <rect class="slip-svg open" x="126" y="36" width="12" height="18"/>
+              <rect class="slip-svg open" x="196" y="36" width="12" height="18"/>
+              <rect class="slip-svg hold" x="266" y="36" width="12" height="18"/>
+              <rect class="slip-svg open" x="336" y="36" width="12" height="18"/>
+              <rect class="slip-svg open" x="406" y="36" width="12" height="18"/>
+              <rect class="slip-svg hold" x="476" y="36" width="12" height="18"/>
+            </svg>
+          </div>
 
-        <table class="rate-table">
-          <thead>
-            <tr><th data-i18n="marina.th.length">Length Overall</th><th data-i18n="marina.th.day">Per Day</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Up to 12m</td><td><span class="price">€90</span> <span data-i18n="marina.perDay">/ day</span></td></tr>
-            <tr><td>12 – 18m</td><td><span class="price">€160</span> <span data-i18n="marina.perDay">/ day</span></td></tr>
-            <tr><td>18 – 24m</td><td><span class="price">€280</span> <span data-i18n="marina.perDay">/ day</span></td></tr>
-            <tr><td>24m +</td><td><span class="price" data-i18n="marina.onRequest">On Request</span></td></tr>
-          </tbody>
-        </table>
+          <div class="pontoon">
+            <div class="pontoon-head">
+              <span class="pontoon-size" data-i18n="marina.size.medium">Medium · 12 – 18m</span>
+              <span class="pontoon-rate"><span class="price">€160</span> <span data-i18n="marina.perDay">/ day</span></span>
+            </div>
+            <svg class="pontoon-line" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg">
+              <line class="pier-line" x1="16" y1="30" x2="580" y2="30"/>
+              <line class="pier-cap" x1="580" y1="20" x2="580" y2="40"/>
+              <rect class="slip-svg open" x="76" y="6" width="14" height="18"/>
+              <rect class="slip-svg full" x="166" y="6" width="14" height="18"/>
+              <rect class="slip-svg open" x="256" y="6" width="14" height="18"/>
+              <rect class="slip-svg open" x="346" y="6" width="14" height="18"/>
+              <rect class="slip-svg hold" x="436" y="6" width="14" height="18"/>
+              <rect class="slip-svg hold" x="76" y="36" width="14" height="18"/>
+              <rect class="slip-svg open" x="166" y="36" width="14" height="18"/>
+              <rect class="slip-svg open" x="256" y="36" width="14" height="18"/>
+              <rect class="slip-svg full" x="346" y="36" width="14" height="18"/>
+              <rect class="slip-svg open" x="436" y="36" width="14" height="18"/>
+            </svg>
+          </div>
+
+          <div class="pontoon">
+            <div class="pontoon-head">
+              <span class="pontoon-size" data-i18n="marina.size.large">Large · 18m and above</span>
+              <span class="pontoon-rate" data-i18n="marina.onRequest">On Request</span>
+            </div>
+            <svg class="pontoon-line" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg">
+              <line class="pier-line" x1="16" y1="30" x2="580" y2="30"/>
+              <line class="pier-cap" x1="580" y1="20" x2="580" y2="40"/>
+              <rect class="slip-svg open" x="106" y="4" width="18" height="22"/>
+              <rect class="slip-svg full" x="286" y="4" width="18" height="22"/>
+              <rect class="slip-svg open" x="466" y="4" width="18" height="22"/>
+              <rect class="slip-svg open" x="106" y="34" width="18" height="22"/>
+              <rect class="slip-svg hold" x="286" y="34" width="18" height="22"/>
+              <rect class="slip-svg open" x="466" y="34" width="18" height="22"/>
+            </svg>
+          </div>
+        </div>
       </div>
 
       <div class="marina-panel" data-reveal>

@@ -342,21 +342,16 @@ h3 { font-size: var(--step-h3); line-height: 1.2; }
 .dot-hold { background: var(--gold); }
 .dot-full { background: var(--mist); opacity: 0.5; }
 
-.dock-figure { margin-bottom: 2.4rem; }
-.dock-figure svg { width: 100%; height: auto; }
-.shore { fill: rgba(246,242,234,0.06); }
+.pontoons { display: flex; flex-direction: column; gap: 1.9rem; }
+.pontoon-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 0.5rem; }
+.pontoon-size { font-size: 0.88rem; letter-spacing: 0.03em; color: var(--foam); }
+.pontoon-rate, .pontoon-rate .price { color: var(--gold-soft); font-family: var(--f-display); font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.pontoon-rate small, .pontoon-rate > span:last-child { font-size: 0.8rem; font-family: var(--f-body); color: var(--mist); }
+.pontoon-line { width: 100%; height: auto; display: block; }
 .pier-line, .pier-cap { stroke: rgba(246,242,234,0.4); stroke-width: 2; }
-.pier-label-svg { font-family: var(--f-body); font-size: 15px; font-weight: 500; letter-spacing: 0.08em; fill: var(--gold-soft); }
 .slip-svg.open { fill: transparent; stroke: var(--gold-soft); stroke-width: 1.4; }
 .slip-svg.hold { fill: var(--gold); }
 .slip-svg.full { fill: rgba(147,162,180,0.4); }
-
-.rate-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-.rate-table th, .rate-table td { text-align: left; padding: 0.85rem 0.6rem; border-bottom: 1px solid rgba(246,242,234,0.14); }
-.rate-table th { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mist); font-weight: 500; }
-.rate-table td:last-child, .rate-table th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
-.rate-table tr:last-child td { border-bottom: 0; }
-.rate-table .price { color: var(--gold-soft); font-family: var(--f-display); font-size: 1.15rem; }
 
 .marina-panel { background: rgba(5,11,24,0.5); border: 1px solid rgba(198,161,92,0.2); padding: clamp(1.8rem, 3vw, 2.6rem); }
 .marina-panel h3 { color: var(--foam); margin-bottom: 0.3rem; }
